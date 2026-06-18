@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the main contribution of the Transformer architecture proposed in 'Attention is All You Need'?",
+    "expected_sources": ["NIPS-2017-attention-is-all-you-need-Paper.pdf"],
+    "expected_keywords": ["attention", "transformer", "encoder", "decoder", "self-attention"]
+  },
+  {
+    "question": "How does multi-head attention work?",
+    "expected_sources": ["NIPS-2017-attention-is-all-you-need-Paper.pdf"],
+    "expected_keywords": ["heads", "queries", "keys", "values", "parallel"]
+  },
+  {
+    "question": "What is positional encoding and why is it needed in Transformers?",
+    "expected_sources": ["NIPS-2017-attention-is-all-you-need-Paper.pdf"],
+    "expected_keywords": ["positional", "encoding", "sequence", "order", "sine", "cosine"]
+  },
+  {
+    "question": "What is an image patch and how does Vision Transformer process images?",
+    "expected_sources": ["Vision Transformer.pdf"],
+    "expected_keywords": ["patch", "image", "tokens", "sequence", "embedding"]
+  },
+  {
+    "question": "What datasets were used to train the Vision Transformer?",
+    "expected_sources": ["Vision Transformer.pdf"],
+    "expected_keywords": ["ImageNet", "dataset", "training", "classification"]
+  },
+  {
+    "question": "How does the Transformer model handle the problem of vanishing gradients compared to RNNs?",
+    "expected_sources": ["NIPS-2017-attention-is-all-you-need-Paper.pdf"],
+    "expected_keywords": ["recurrent", "path", "layers", "gradient"]
+  },
+  {
+    "question": "What are the advantages of using attention mechanisms over convolutions for image recognition?",
+    "expected_sources": ["Vision Transformer.pdf"],
+    "expected_keywords": ["global", "attention", "convolutional", "inductive", "bias"]
+  },
+  {
+    "question": "What training tricks or regularization techniques were used in Transformers for NLP?",
+    "expected_sources": ["NIPS-2017-attention-is-all-you-need-Paper.pdf"],
+    "expected_keywords": ["dropout", "regularization", "warmup", "learning rate"]
+  },
+  {
+    "question": "How many layers does the standard Transformer encoder and decoder have?",
+    "expected_sources": ["NIPS-2017-attention-is-all-you-need-Paper.pdf"],
+    "expected_keywords": ["6", "layers", "encoder", "decoder", "stack"]
+  },
+  {
+    "question": "What performance did Vision Transformer achieve compared to ResNets?",
+    "expected_sources": ["Vision Transformer.pdf"],
+    "expected_keywords": ["accuracy", "ResNet", "benchmark", "comparable", "state-of-the-art"]
+  }
+]
