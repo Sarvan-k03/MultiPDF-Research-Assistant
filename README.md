@@ -6,6 +6,12 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.35+-red?style=flat-square&logo=streamlit)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-0.5+-green?style=flat-square)
 ![Groq](https://img.shields.io/badge/Groq_API-free_tier-orange?style=flat-square)
+[![Live App](https://img.shields.io/badge/Live_App-View_on_Streamlit-FF4B4B?style=flat-square&logo=streamlit)](https://multipdf-research-assistant.streamlit.app/)
+
+---
+
+### 🌐 Try the Live App!
+**👉 [https://multipdf-research-assistant.streamlit.app/](https://multipdf-research-assistant.streamlit.app/)**
 
 ---
 
