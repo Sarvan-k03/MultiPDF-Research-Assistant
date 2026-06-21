@@ -18,6 +18,15 @@ from dotenv import load_dotenv
 # ── Add project root to path ───────────────────────────────────────────────────
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+# ── Streamlit Cloud ChromaDB Workaround ────────────────────────────────────────
+# Streamlit Cloud's default SQLite version is too old for ChromaDB.
+try:
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass
+
 from src.pdf_processor import process_multiple_pdfs
 from src.vector_store import add_chunks, list_sources, delete_source, get_collection_stats, clear_all
 from src.llm_chain import ask, check_api_key
@@ -322,8 +331,8 @@ with st.sidebar:
     if not check_api_key():
         st.markdown("""
         <div class="api-warning">
-        ⚠️ <strong>Gemini API key missing</strong><br>
-        Add <code>GEMINI_API_KEY=...</code> to your <code>.env</code> file.
+        ⚠️ <strong>Groq API key missing</strong><br>
+        Add <code>GROQ_API_KEY=...</code> to your <code>.env</code> file.
         </div>
         """, unsafe_allow_html=True)
 
