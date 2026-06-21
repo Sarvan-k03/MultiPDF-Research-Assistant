@@ -53,7 +53,7 @@ html, body, [class*="css"] {
 }
 
 /* ── Hide default Streamlit chrome ── */
-#MainMenu, footer, header { visibility: hidden; }
+#MainMenu, footer { visibility: hidden; }
 .block-container { padding-top: 1.5rem !important; }
 
 /* ── App background ── */
