@@ -5,7 +5,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.35+-red?style=flat-square&logo=streamlit)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-0.5+-green?style=flat-square)
-![Gemini](https://img.shields.io/badge/Gemini_1.5_Flash-free_tier-orange?style=flat-square&logo=google)
+![Groq](https://img.shields.io/badge/Groq_API-free_tier-orange?style=flat-square)
 
 ---
 
@@ -42,7 +42,7 @@ PDF Files (3-5)
 [Cosine Similarity Search] → Top-5 chunks
      │
      ▼
-[Gemini 1.5 Flash] + Citation-forcing prompt
+[Groq API] + Citation-forcing prompt
      │
      ▼
 Answer with [Source: file.pdf, Page X] citations
@@ -67,17 +67,17 @@ venv\Scripts\activate          # Windows
 pip install -r requirements.txt
 ```
 
-### 2. Add your Gemini API key
+### 2. Add your Groq API key
 
 ```bash
 # Copy the template
 copy .env.example .env
 
 # Edit .env and add your key:
-# GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# GROQ_API_KEY=gsk_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-Get a free key at → **[aistudio.google.com](https://aistudio.google.com)** (no credit card needed)
+Get a free key at → **[console.groq.com](https://console.groq.com/keys)**
 
 ### 3. Run the app
 
@@ -104,7 +104,7 @@ multi-pdf-chat-assistant/
 │   ├── embedder.py           # all-MiniLM-L6-v2 embeddings (singleton)
 │   ├── vector_store.py       # ChromaDB: add, query, delete, stats
 │   ├── retriever.py          # Top-K retrieval + context formatting
-│   ├── llm_chain.py          # Gemini API + citation-forcing prompt
+│   ├── llm_chain.py          # Groq API + citation-forcing prompt
 │   └── evaluator.py          # Automated evaluation pipeline
 │
 ├── chroma_db/                # Auto-created: persisted vector database
@@ -160,7 +160,7 @@ This runs 10 test questions through the pipeline and generates `evaluation/eval_
 | Chunking | LangChain | RecursiveCharacterTextSplitter |
 | Embeddings | sentence-transformers | all-MiniLM-L6-v2 (384-dim, local) |
 | Vector DB | ChromaDB | Local, persistent, cosine similarity |
-| LLM | Gemini 1.5 Flash | Free tier, citation-instructed prompt |
+| LLM | Groq API | Fast inference, citation-instructed prompt |
 | UI | Streamlit | Dark theme, glassmorphism design |
 
 ---
